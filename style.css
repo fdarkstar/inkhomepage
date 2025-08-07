@@ -128,6 +128,14 @@ main {
     margin-right: 15px;
 }
 
+#search-engine-select {
+    font-size: 0.8em;
+    padding: 5px;
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
 .author, .version {
     margin-top: 15px;
     font-size: 1em;

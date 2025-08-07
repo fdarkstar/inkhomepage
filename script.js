@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const dateDisplay = document.getElementById('date-display');
     const clockContainer = document.querySelector('header');
     const toggleClockCheckbox = document.getElementById('toggle-clock');
+    const searchForm = document.getElementById('search-form');
+    const searchEngineSelect = document.getElementById('search-engine-select');
     const pages = document.querySelectorAll('.page');
 
     function updateTime() {
@@ -39,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function applySettings() {
+        // Clock setting
         const showClock = localStorage.getItem('showClock') !== 'false';
         toggleClockCheckbox.checked = showClock;
         if (showClock) {
@@ -46,10 +49,29 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             clockContainer.classList.add('hidden');
         }
+
+        // Search engine setting
+        const savedEngine = localStorage.getItem('searchEngine') || "https://www.bing.com/search";
+        searchEngineSelect.value = savedEngine;
+        searchForm.action = savedEngine;
+
+        // Also, update the name of the search parameter for Baidu
+        const searchInput = searchForm.querySelector('input');
+        if (searchEngineSelect.value.includes('baidu')) {
+            searchInput.name = 'wd';
+        } else {
+            searchInput.name = 'q';
+        }
     }
 
     toggleClockCheckbox.addEventListener('change', () => {
         localStorage.setItem('showClock', toggleClockCheckbox.checked);
+        applySettings();
+    });
+
+    searchEngineSelect.addEventListener('change', () => {
+        const selectedEngine = searchEngineSelect.value;
+        localStorage.setItem('searchEngine', selectedEngine);
         applySettings();
     });
 
