@@ -128,10 +128,14 @@ main {
     margin-right: 15px;
 }
 
-.author {
-    margin-top: 30px;
+.author, .version {
+    margin-top: 15px;
     font-size: 1em;
     color: #555555;
+}
+
+.author {
+    margin-top: 30px;
 }
 
 @media (max-width: 600px) {
