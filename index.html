@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极简主页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="time-display"></div>
+            <div id="date-display"></div>
+        </header>
+        <main>
+            <section id="search-section" class="page">
+                <form id="search-form" action="https://www.bing.com/search" method="get">
+                    <input type="text" name="q" class="search-input" placeholder="搜索..." autofocus>
+                    <button type="submit" class="search-button">搜索</button>
+                </form>
+            </section>
+            <nav id="main-nav">
+                <a href="#search-section" class="nav-link">主页</a>
+                <a href="#bookmarks-section" class="nav-link">书签</a>
+                <a href="#settings-section" class="nav-link">设置</a>
+            </nav>
+            <section id="bookmarks-section" class="page hidden">
+                <h2>书签</h2>
+                <div class="bookmarks-grid">
+                    <a href="https://www.google.com" class="bookmark-item">谷歌</a>
+                    <a href="https://www.github.com" class="bookmark-item">GitHub</a>
+                    <a href="https://www.v2ex.com" class="bookmark-item">V2EX</a>
+                </div>
+            </section>
+            <section id="settings-section" class="page hidden">
+                <h2>设置</h2>
+                <div class="setting-item">
+                    <label for="toggle-clock">显示时钟</label>
+                    <input type="checkbox" id="toggle-clock" checked>
+                </div>
+                <p class="author">作者：F暗星</p>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

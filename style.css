@@ -1,0 +1,130 @@
+body {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+header {
+    padding: 20px 0;
+    border-bottom: 2px solid #000000;
+}
+
+#time-display {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#date-display {
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.search-input {
+    width: 70%;
+    padding: 15px;
+    font-size: 1.2em;
+    border: 2px solid #000000;
+    border-radius: 0;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.search-button {
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+    margin-left: -5px; /* Align button with input */
+}
+
+.search-button:active {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+#main-nav {
+    margin-top: 20px;
+    border-top: 2px solid #000000;
+    padding-top: 20px;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 0 10px;
+    font-size: 1.2em;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid #000000;
+}
+
+.nav-link:active {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.page {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.bookmarks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.bookmark-item {
+    display: block;
+    padding: 20px;
+    border: 2px solid #000000;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.1em;
+}
+
+.bookmark-item:active {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+.setting-item label {
+    margin-right: 15px;
+}
+
+.author {
+    margin-top: 30px;
+    font-size: 1em;
+    color: #555555;
+}
