@@ -1,5 +1,9 @@
 body {
     background-color: #FFFFFF;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50 C 0 20, 100 20, 100 50' stroke='black' fill='transparent' stroke-width='2'/%3E%3Cpath d='M15 22 L 30 5 L 45 22' stroke='black' fill='transparent' stroke-width='2'/%3E%3Cpath d='M55 22 L 70 5 L 85 22' stroke='black' fill='transparent' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px bottom 50px;
+    background-size: 150px auto;
     color: #000000;
     font-family: Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -128,4 +132,49 @@ main {
     margin-top: 30px;
     font-size: 1em;
     color: #555555;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 5vh;
+        background-size: 100px auto;
+        background-position: right 10px bottom 10px;
+    }
+
+    #time-display {
+        font-size: 2.5em;
+    }
+
+    #date-display {
+        font-size: 1em;
+    }
+
+    #search-form {
+        display: flex;
+    }
+
+    .search-input {
+        flex-grow: 1;
+        border-right: none;
+    }
+
+    .search-button {
+        border-left: none;
+    }
+
+    #main-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-link {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .bookmarks-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
 }
